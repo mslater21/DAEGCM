@@ -19,18 +19,30 @@ This code requires the following dependencies:
 - matplotlib
 - IPython
 
+# How to run
+## Local Machine
 The following commands will install the needed dependencies on a Windows machine:
+### Terminal Commands
+  pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+  
+  pip3 install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
+  
+  pip3 install torch-sparse -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
+  
+  pip3 install torch-cluster -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
+  
+  pip3 install torch-spline-conv -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
+  
+  pip3 install torch-geometric -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
+  
+  pip3 install munkres
+  
+  pip3 install -U scikit-learn
+  
+  pip3 install matplotlib
 
-pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+### Choose settings in main.py
+Once dependencies are installed, run from main.py after selecting desired settings.
 
-pip3 install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
-pip3 install torch-sparse -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
-pip3 install torch-cluster -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
-pip3 install torch-spline-conv -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
-pip3 install torch-geometric -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
-
-pip3 install munkres
-pip3 install -U scikit-learn
-pip3 install matplotlib
-
+## Google Colab
 Alternatively, the code can be executed at this [Google Colab notebook](https://colab.research.google.com/drive/1kitNm2RNXJskZ__9l1JmRARK1hRIYvx_#scrollTo=tpyywrQkoLnK).
