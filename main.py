@@ -20,17 +20,17 @@ models_to_train = 50  # Number of models to train, average scores will be report
 verbose = False  # Set to true to turn off clearing epoch scores after each model is done training
 
 # Pretrain model settings
-max_pretrain_epochs = 40
+max_pretrain_epochs = 50
 pretrain_lr = .005
 pretrain_weight_decay = 5e-3
 
 # Post-pretrain model settings (encoder + clustering)
-max_training_epochs = 100
+max_training_epochs = 200
 update_interval = 5
 training_lr = .005
 training_weight_decay = 5e-3
 clustering_bias = 10
-objective_multiplier = None  # None is default, 0 = no clustering loss, 1 = no encoder loss
+objective_multiplier = None  # 0 = no clustering loss, 1 = no encoder loss
 similarity = 'euclidean'
 bin_method = 'equal_count'
 
