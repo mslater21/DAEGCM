@@ -8,16 +8,16 @@ def plot_accuracy(history):
     plt.ylabel('Accuracy')
 
 
-def plot_loss(history, pretrain_epochs, training=True, embedding=True, cluster=True):
+def plot_loss(history, training=True, embedding=True, cluster=True):
     labels = []
     if training:
         plt.plot(range(len(history['training_loss'])), history['training_loss'])
         labels.append('Training Loss')
     if embedding:
-        plt.plot(range(pretrain_epochs, len(history['embedding_loss'])), history['embedding_loss'])
+        plt.plot(range(len(history['embedding_loss'])), history['embedding_loss'])
         labels.append('Embedding Loss')
     if cluster:
-        plt.plot(range(pretrain_epochs, len(history['cluster_loss'])), history['cluster_loss'])
+        plt.plot(range(len(history['cluster_loss'])), history['cluster_loss'])
         labels.append('Clustering Loss')
     plt.xlabel('Epochs')
     plt.ylabel('Loss')
